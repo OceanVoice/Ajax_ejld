@@ -29,7 +29,7 @@
 	window.onload = function(){
 		
 		// b. 建立连接 - open("get","07_province.php");
-		xhr.open("get","07_province.php");
+		xhr.open("get","province.php");
 		// c. 发送请求 - send(null)
 		xhr.send(null);
 		// d. 接收服务器端的数据
@@ -61,7 +61,7 @@
 		}
 		
 		if(province.value != "请选择"){
-			xhr.open("post","07_cities.php");
+			xhr.open("post","cities.php");
 			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 			xhr.send("province="+province.value);
 			xhr.onreadystatechange = function(){
